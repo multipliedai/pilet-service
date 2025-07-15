@@ -68,7 +68,7 @@ const resolvers: IResolvers = {
 };
 
 export async function withGql(app: Application) {
-  const server = new ApolloServer({ typeDefs, resolvers });
+  const server = new ApolloServer({ typeDefs, resolvers, csrfPrevention: false });
   await server.start();
   app.use('/', expressMiddleware(server));
 }
