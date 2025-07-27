@@ -1,5 +1,5 @@
 {
-  "name": "sample-pilet-service",
+  "name": "@multipliedai/pilet-service",
   "version": "1.9.0",
   "description": "Piral: Sample pilet feed service.",
   "main": "dist",
@@ -7,8 +7,8 @@
   "homepage": "https://piral.io",
   "scripts": {
     "test:unit": "vitest src",
-    "test:watch": "npm run test:unit -- --watch",
-    "test": "npm run lint && npm run test:unit",
+    "test:watch": "pnpm run test:unit -- --watch",
+    "test": "pnpm run lint && pnpm run test:unit",
     "start": "node dist/cli.js",
     "watch": "node index.js",
     "lint": "eslint 'src/**/*.ts'",
